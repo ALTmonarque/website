@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sommelier — главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--  МЕНЮ (navbar)  -->
+    <nav class="navbar navbar-expand-lg sticky-top site-nav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Sommelier</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainMenu"
+          aria-label="Открыть меню"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav mx-auto gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalog.html">Услуги</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reviews">Отзывы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <a href="contacts.html" class="btn btn-gold">Оставить заявку</a>
+        </div>
+      </div>
+    </nav>
+
+    <!--  БАННЕР (hero)  -->
+    <header class="hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <h1 class="hero__title">Вино, подобранное под ваш повод</h1>
+            <p class="hero__text">
+              Дегустации, подбор к ужину и событиям, винные подарки для компаний
+              и консультации. Мы не продаём бутылки — мы делимся экспертизой.
+            </p>
+            <a href="catalog.html" class="btn btn-gold btn-lg me-2"
+              >Подобрать вино</a
+            >
+            <a href="#services" class="btn btn-outline-gold btn-lg"
+              >Смотреть услуги</a
+            >
+          </div>
+          <div class="col-lg-5 text-center">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--  ПРЕИМУЩЕСТВА  -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Почему Sommelier</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="advantage">
+              <h3>Дипломированные эксперты</h3>
+              <p>
+                Работаем с сомелье, которые знают регионы, сорта и сочетания.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="advantage">
+              <h3>Под ваш бюджет</h3>
+              <p>
+                Подбираем вино с учётом повода, вкуса и суммы, без навязывания.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="advantage">
+              <h3>Онлайн и с выездом</h3>
+              <p>
+                Консультация по видеосвязи или дегустация у вас дома и в офисе.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  ПОПУЛЯРНЫЕ УСЛУГИ-->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <h2 class="section__title mb-0">Популярные услуги</h2>
+        </div>
+
+        <!-- row-cols -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+          <div class="col">
+            <div class="card service-card h-100">
+              <div class="service-card__img img-1"></div>
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-wine mb-2 align-self-start">Хит</span>
+                <h3 class="card-title">Частная дегустация</h3>
+                <p class="card-text">Выезд, 2 часа</p>
+                <p class="price mt-auto">от 12 000 ₽</p>
+                <a href="service.html" class="btn btn-outline-gold"
+                  >Подробнее</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card service-card h-100">
+              <div class="service-card__img img-2"></div>
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-wine mb-2 align-self-start"
+                  >Онлайн</span
+                >
+                <h3 class="card-title">Подбор вина к ужину</h3>
+                <p class="card-text">Онлайн, 30 минут</p>
+                <p class="price mt-auto">от 2 000 ₽</p>
+                <a href="service.html" class="btn btn-outline-gold"
+                  >Подробнее</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card service-card h-100">
+              <div class="service-card__img img-3"></div>
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-wine mb-2 align-self-start"
+                  >Для компаний</span
+                >
+                <h3 class="card-title">Дегустация для команды</h3>
+                <p class="card-text">Выезд, 3 часа</p>
+                <p class="price mt-auto">от 30 000 ₽</p>
+                <a href="service.html" class="btn btn-outline-gold"
+                  >Подробнее</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card service-card h-100">
+              <div class="service-card__img img-4"></div>
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-wine mb-2 align-self-start"
+                  >Новинка</span
+                >
+                <h3 class="card-title">Мастер-класс для пар</h3>
+                <p class="card-text">Студия, 2 часа</p>
+                <p class="price mt-auto">от 8 000 ₽</p>
+                <a href="service.html" class="btn btn-outline-gold"
+                  >Подробнее</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3 mt-4 text-center">
+          <div class="col-6 col-md-3">
+            <div class="direction">Дегустации</div>
+          </div>
+          <div class="col-6 col-md-3"><div class="direction">Подбор</div></div>
+          <div class="col-6 col-md-3"><div class="direction">Подарки</div></div>
+          <div class="col-6 col-md-3">
+            <div class="direction">Консультации</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  СТАТИСТИКА -->
+    <section class="stats">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-6 col-md-3">
+            <div class="stats__num">300+</div>
+            <div>дегустаций проведено</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stats__num">1 200</div>
+            <div>подобранных вин</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stats__num">40</div>
+            <div>компаний-клиентов</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stats__num">4.9</div>
+            <div>средняя оценка</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ (карусель Bootstrap)  -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <h2 class="section__title text-center">Отзывы</h2>
+        <div
+          id="reviewsCarousel"
+          class="carousel slide mx-auto reviews"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#reviewsCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-label="Отзыв 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#reviewsCarousel"
+              data-bs-slide-to="1"
+              aria-label="Отзыв 2"
+            ></button>
+          </div>
+          <div class="carousel-inner text-center pb-5">
+            <div class="carousel-item active">
+              <blockquote class="review__text">
+                [после хорошего вина начинаю танцевать]
+              </blockquote>
+              <p class="review__author">[Пантера], [котедж]</p>
+            </div>
+            <div class="carousel-item">
+              <blockquote class="review__text">[текст]</blockquote>
+              <p class="review__author">[Mellstroy], [Litenergy]</p>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#reviewsCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span
+            ><span class="visually-hidden">Назад</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#reviewsCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span
+            ><span class="visually-hidden">Вперёд</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--  ПРИЗЫВ К ЗАЯВКЕ  -->
+    <section class="section section--alt text-center">
+      <div class="container">
+        <h2 class="section__title">Подберём вино для вашего повода</h2>
+        <p class="mb-4">
+          Оставьте заявку, и сомелье свяжется с вами, чтобы обсудить детали и
+          дату.
+        </p>
+        <a href="contacts.html" class="btn btn-gold btn-lg">Оставить заявку</a>
+      </div>
+    </section>
+
+    <!--  ПОДВАЛ -->
+    <footer class="site-footer">
+      <div class="container d-flex flex-wrap justify-content-between gap-2">
+        <span class="footer__brand">Sommelier</span>
+        <span>[+8 888 888 88 88], [bebrowic@gmail.com]</span>
+        <span>© 2026 Sommelier. Учебный проект</span>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <button id="toTop" class="to-top" aria-label="Наверх">↑</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

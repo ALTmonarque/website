@@ -1,0 +1,218 @@
+/* ===== ПЕРЕМЕННЫЕ: цвета и шрифты меняются в одном месте ===== */
+:root {
+  --bg: #1a0f14;        /* основной фон */
+  --bg-alt: #21131a;    /* фон чередующихся секций */
+  --card: #26161c;      /* фон карточек */
+  --line: #3a2630;      /* линии и границы */
+  --wine: #6b1d2e;      /* бордовый акцент */
+  --gold: #c9a24b;      /* золотой акцент */
+  --gold-light: #e0be6a;
+  --cream: #f3ebdd;     /* основной текст */
+  --muted: #d8cbb8;     /* второстепенный текст */
+  --font-head: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ===== БАЗА ===== */
+body {
+  background: var(--bg);
+  color: var(--cream);
+  font-family: var(--font-body);
+}
+h1, h2, h3 { font-family: var(--font-head); font-weight: 600; }
+p { color: var(--muted); line-height: 1.6; }
+
+/* ===== КНОПКИ ===== */
+.btn-gold {
+  background: var(--gold);
+  color: var(--bg);
+  font-weight: 600;
+  border: 1px solid var(--gold);
+}
+.btn-gold:hover { background: var(--gold-light); color: var(--bg); }
+.btn-outline-gold {
+  color: var(--cream);
+  border: 1px solid var(--gold);
+}
+.btn-outline-gold:hover { background: var(--gold); color: var(--bg); }
+.link-gold { color: var(--gold); text-decoration: none; font-weight: 500; }
+.link-gold:hover { color: var(--gold-light); }
+
+/* ===== МЕНЮ ===== */
+.site-nav { background: var(--bg); border-bottom: 1px solid var(--line); }
+.navbar-brand {
+  font-family: var(--font-head);
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+.navbar-brand:hover { color: var(--gold-light); }
+.site-nav .nav-link { color: var(--cream); }
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active { color: var(--gold-light); }
+.navbar-toggler { border-color: var(--gold); }
+/* Иконка «бургер» в светлом цвете */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f3ebdd' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ===== БАННЕР (блок hero) ===== */
+.hero { padding: 5.5rem 0; }
+.hero__title {
+  font-size: clamp(2.6rem, 6vw, 4rem);  /* адаптивный размер шрифта */
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+.hero__text { font-size: 1.15rem; max-width: 520px; margin-bottom: 2rem; }
+.hero__arch {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1.1;
+  margin: 0 auto;
+  border: 1px solid var(--gold);
+  border-radius: 200px 200px 12px 12px;
+  background: linear-gradient(180deg, var(--wine), #2a1219);
+}
+
+/* ===== СЕКЦИИ ===== */
+.section { padding: 4.5rem 0; }
+.section--alt { background: var(--bg-alt); }
+.section__title { font-size: 2.4rem; margin-bottom: 2rem; }
+
+/* ===== ПРЕИМУЩЕСТВА ===== */
+.advantage { border-top: 2px solid var(--gold); padding-top: 1rem; }
+.advantage h3 { font-size: 1.5rem; margin-bottom: .5rem; }
+
+/* ===== КАРТОЧКИ УСЛУГ ===== */
+.service-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.service-card__img { height: 120px; }
+.img-1 { background: linear-gradient(135deg, #6b1d2e, #3a1620); }
+.img-2 { background: linear-gradient(135deg, #4a2a1a, #2a1219); }
+.img-3 { background: linear-gradient(135deg, #3a1620, #1f2a2e); }
+.img-4 { background: linear-gradient(135deg, #6b1d2e, #4a3a1a); }
+.service-card .card-title { font-size: 1.5rem; color: var(--cream); }
+.service-card .card-text { color: var(--muted); font-size: .9rem; }
+.price { color: var(--gold-light); font-weight: 600; }
+.badge-wine { background: var(--wine); color: var(--cream); font-weight: 500; }
+
+/* ===== НАПРАВЛЕНИЯ ===== */
+.direction {
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ===== СТАТИСТИКА ===== */
+.stats { background: var(--wine); padding: 3.5rem 0; }
+.stats__num {
+  font-family: var(--font-head);
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+
+/* ===== ОТЗЫВЫ ===== */
+.reviews { max-width: 760px; }
+.review__text {
+  font-family: var(--font-head);
+  font-size: 1.7rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.review__author { color: var(--gold); font-weight: 500; }
+.carousel-indicators [data-bs-target] { background-color: var(--gold); }
+
+/* ===== ПОДВАЛ ===== */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 2rem 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+.footer__brand {
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+/* Панель фильтров и формы */
+.filters {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.form-label { color: var(--muted); font-size: .9rem; }
+.form-control, .form-select {
+  background-color: var(--bg);
+  color: var(--cream);
+  border: 1px solid var(--line);
+}
+.form-control:focus, .form-select:focus {
+  background-color: var(--bg);
+  color: var(--cream);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 .2rem rgba(201, 162, 75, .25);
+}
+.form-control::placeholder { color: #8a7a78; }
+.form-check-input:checked { background-color: var(--gold); border-color: var(--gold); }
+ 
+/* Хлебные крошки */
+.breadcrumb { --bs-breadcrumb-divider-color: var(--muted); }
+.breadcrumb a { color: var(--gold); text-decoration: none; }
+.breadcrumb-item.active { color: var(--muted); }
+ 
+/* Список «Что входит» и контакты */
+.included { color: var(--muted); line-height: 1.8; }
+.contact-list li { color: var(--muted); margin-bottom: .5rem; }
+ 
+/* Модальное окно */
+.modal-content { background: var(--card); color: var(--cream); border: 1px solid var(--line); }
+.modal-header, .modal-footer { border-color: var(--line); }
+.btn-close { filter: invert(1); }
+ 
+/* Аккордеон FAQ */
+.accordion {
+  --bs-accordion-bg: var(--card);
+  --bs-accordion-color: var(--muted);
+  --bs-accordion-border-color: var(--line);
+  --bs-accordion-btn-color: var(--cream);
+  --bs-accordion-btn-bg: var(--card);
+  --bs-accordion-active-bg: var(--wine);
+  --bs-accordion-active-color: var(--cream);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 .2rem rgba(201, 162, 75, .25);
+}
+.accordion-button::after { filter: invert(1); }
+.accordion-button:not(.collapsed)::after { filter: invert(1); }
+ 
+/* Кнопка «Наверх» */
+.to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--gold);
+  font-size: 1.4rem;
+  display: none;
+}
+.to-top.show { display: block; }
+.to-top:hover { background: var(--gold); color: var(--bg); }
+ 
+.directions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+ 
