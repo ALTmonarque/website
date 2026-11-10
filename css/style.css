@@ -64,15 +64,6 @@ p { color: var(--muted); line-height: 1.6; }
   margin-bottom: 1.5rem;
 }
 .hero__text { font-size: 1.15rem; max-width: 520px; margin-bottom: 2rem; }
-.hero__arch {
-  width: 100%;
-  max-width: 380px;
-  aspect-ratio: 1 / 1.1;
-  margin: 0 auto;
-  border: 1px solid var(--gold);
-  border-radius: 200px 200px 12px 12px;
-  background: linear-gradient(180deg, var(--wine), #2a1219);
-}
 
 /* ===== СЕКЦИИ ===== */
 .section { padding: 4.5rem 0; }
@@ -90,11 +81,7 @@ p { color: var(--muted); line-height: 1.6; }
   border-radius: 8px;
   overflow: hidden;
 }
-.service-card__img { height: 120px; }
-.img-1 { background: linear-gradient(135deg, #6b1d2e, #3a1620); }
-.img-2 { background: linear-gradient(135deg, #4a2a1a, #2a1219); }
-.img-3 { background: linear-gradient(135deg, #3a1620, #1f2a2e); }
-.img-4 { background: linear-gradient(135deg, #6b1d2e, #4a3a1a); }
+.service-card__img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
 .service-card .card-title { font-size: 1.5rem; color: var(--cream); }
 .service-card .card-text { color: var(--muted); font-size: .9rem; }
 .price { color: var(--gold-light); font-weight: 600; }
@@ -130,19 +117,6 @@ p { color: var(--muted); line-height: 1.6; }
 .review__author { color: var(--gold); font-weight: 500; }
 .carousel-indicators [data-bs-target] { background-color: var(--gold); }
 
-/* ===== ПОДВАЛ ===== */
-.site-footer {
-  border-top: 1px solid var(--line);
-  padding: 2rem 0;
-  color: var(--muted);
-  font-size: .9rem;
-}
-.footer__brand {
-  font-family: var(--font-head);
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--gold);
-}
 /* Панель фильтров и формы */
 .filters {
   background: var(--card);
@@ -164,21 +138,21 @@ p { color: var(--muted); line-height: 1.6; }
 }
 .form-control::placeholder { color: #8a7a78; }
 .form-check-input:checked { background-color: var(--gold); border-color: var(--gold); }
- 
+
 /* Хлебные крошки */
 .breadcrumb { --bs-breadcrumb-divider-color: var(--muted); }
 .breadcrumb a { color: var(--gold); text-decoration: none; }
 .breadcrumb-item.active { color: var(--muted); }
- 
+
 /* Список «Что входит» и контакты */
 .included { color: var(--muted); line-height: 1.8; }
 .contact-list li { color: var(--muted); margin-bottom: .5rem; }
- 
+
 /* Модальное окно */
 .modal-content { background: var(--card); color: var(--cream); border: 1px solid var(--line); }
 .modal-header, .modal-footer { border-color: var(--line); }
 .btn-close { filter: invert(1); }
- 
+
 /* Аккордеон FAQ */
 .accordion {
   --bs-accordion-bg: var(--card);
@@ -192,7 +166,7 @@ p { color: var(--muted); line-height: 1.6; }
 }
 .accordion-button::after { filter: invert(1); }
 .accordion-button:not(.collapsed)::after { filter: invert(1); }
- 
+
 /* Кнопка «Наверх» */
 .to-top {
   position: fixed;
@@ -204,15 +178,49 @@ p { color: var(--muted); line-height: 1.6; }
   border-radius: 50%;
   background: var(--bg);
   color: var(--gold);
-  font-size: 1.4rem;
+  padding: 0;
   display: none;
+  align-items: center;
+  justify-content: center;
 }
-.to-top.show { display: block; }
+.to-top.show { display: flex; }
 .to-top:hover { background: var(--gold); color: var(--bg); }
- 
+
 .directions {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
- 
+/* ===== ПОДВАЛ, ЛОГОТИП, «О НАС» ===== */
+
+/* Логотип рядом с названием */
+.brand__logo { flex-shrink: 0; }
+
+/* Подвал */
+.site-footer {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--line);
+  padding: 3rem 0 1.5rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+.footer__brand { font-family: var(--font-head); font-size: 1.6rem; font-weight: 600; color: var(--gold); margin-bottom: .75rem; }
+.footer__title { font-family: var(--font-head); font-size: 1.3rem; color: var(--cream); margin-bottom: 1rem; }
+.footer__list li { margin-bottom: .6rem; }
+.footer__list strong { color: var(--cream); }
+.footer__list a { color: var(--gold); text-decoration: none; }
+.footer__list a:hover { color: var(--gold-light); }
+.footer__social {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: .5rem 1rem;
+  color: var(--cream);
+  text-decoration: none;
+}
+.footer__social:hover { border-color: var(--gold); color: var(--gold-light); }
+.footer__bottom { border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1.5rem; font-size: .9rem; }
+
+/* Страница «О нас»: шаги */
+.step { border: 1px solid var(--line); border-radius: 8px; padding: 1.5rem; background: var(--card); height: 100%; }
+.step__num { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--wine); color: var(--gold-light); font-weight: 600; margin-bottom: 1rem; }

@@ -12,13 +12,17 @@
 <body>
   <nav class="navbar navbar-expand-lg sticky-top site-nav">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Sommelier</a>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <svg class="brand__logo" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10c0 5-1 8-5 9-4-1-5-4-5-9z"/><path d="M7.5 7h9" opacity=".6"/><path d="M12 12v8M8 21h8"/></svg>
+        Sommelier
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainMenu">
         <ul class="navbar-nav mx-auto gap-lg-3">
-          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-          <li class="nav-item"><a class="nav-link" href="catalog.html">Услуги</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contacts.html">Контакты</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="catalog.html">Услуги</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contacts.html">Контакты</a></li>
         </ul>
         <a href="service.html" class="btn btn-gold">Оставить заявку</a>
       </div>
@@ -39,10 +43,10 @@
         <div class="col-lg-5">
           <p>Sommelier — сервис услуг сомелье: дегустации, подбор вина, подарки для компаний и консультации.</p>
           <ul class="list-unstyled contact-list">
-            <li>Телефон: [+8 888 888 88 88]</li>
-            <li>Почта: [bebrowic@gmail.com]</li>
-            <li>Адрес: [Москва,ул.Пушкина]</li>
-            <li>Режим работы: [пн,ср,пт 9.00-21.00]</li>
+            <li>Телефон: +7 901 738 66 71</li>
+            <li>Почта: bebrowic@gmail.com</li>
+            <li>Адрес: г. Москва, пр. Вернадского 78, РТУ МИРЭА</li>
+            <li>Режим работы: пн, ср, пт 9.00–21.00</li>
           </ul>
           <p>Мы в соцсетях: <a class="link-gold" href="https://t.me/altmonarque" target="_blank" rel="noopener">Telegram</a>, <a class="link-gold" href="#">[VK]</a></p>
         </div>
@@ -95,12 +99,44 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container d-flex flex-wrap justify-content-between gap-2">
-      <span class="footer__brand">Sommelier</span>
-      <span>© 2026 Sommelier. Учебный проект</span>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer__brand d-flex align-items-center gap-2"><svg class="brand__logo" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10c0 5-1 8-5 9-4-1-5-4-5-9z"/><path d="M7.5 7h9" opacity=".6"/><path d="M12 12v8M8 21h8"/></svg>Sommelier</div>
+          <p>Сервис услуг сомелье: дегустации, подбор вина, подарки для компаний и консультации.</p>
+        </div>
+        <div class="col-lg-4">
+          <h3 class="footer__title">Навигация</h3>
+          <ul class="footer__list list-unstyled">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог услуг</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__list list-unstyled">
+            <li><strong>Адрес:</strong> г. Москва, пр. Вернадского 78, РТУ МИРЭА</li>
+            <li><strong>Телефон:</strong> <a href="tel:+79017386671">+7 901 738 66 71</a></li>
+            <li><strong>Время работы:</strong> пн, ср, пт 9.00–21.00</li>
+            <li><strong>Почта:</strong> <a href="mailto:bebrowic@gmail.com">bebrowic@gmail.com</a></li>
+          </ul>
+          <p class="mb-2">Мы в соцсетях:</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="footer__social" href="https://t.me/altmonarque" target="_blank" rel="noopener">Telegram</a>
+            <a class="footer__social" href="#" target="_blank" rel="noopener">[VK]</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom d-flex flex-wrap justify-content-between gap-2">
+        <span>© 2026 Sommelier. Все права защищены.</span>
+      </div>
     </div>
   </footer>
-  <button id="toTop" class="to-top" aria-label="Наверх">↑</button>
+  <button id="toTop" class="to-top" aria-label="Наверх">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10c0 5-1 8-5 9-4-1-5-4-5-9z"/><path d="M7.5 7h9" opacity=".6"/><path d="M12 12v8M8 21h8"/></svg>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
