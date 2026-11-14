@@ -43,6 +43,8 @@ document.querySelectorAll('form[data-validate]').forEach((form) => {
     const alertBox = form.querySelector('#formAlert');
     if (ok && alertBox) {
       alertBox.classList.remove('d-none');
+      const nameField = form.querySelector('[name="name"]');
+      if (window.showSuccessModal) window.showSuccessModal(nameField ? nameField.value.trim() : '');
       form.reset();
       calcPrice();
     }
